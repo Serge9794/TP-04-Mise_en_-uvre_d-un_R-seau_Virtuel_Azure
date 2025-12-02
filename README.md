@@ -71,28 +71,36 @@ Apprendre à créer manuellement un réseau virtuel, définir son adressage, cr�
    * `template.json`
    * `parameters.json`
 
-     ➤ Capture 1 – Création du groupe de ressources
+  # ➤ Capture 1 – Création du groupe de ressources
+  
+<img width="1217" height="807" alt="1" src="https://github.com/user-attachments/assets/01abeed0-247d-45a2-b4e4-ad40f3244910" />
 
 
-➤ Capture 2 – Formulaire de création du VNet MainServicesVnet
-
-
-
-
-
-➤ Capture 3 – Création du sous-réseau AppsSubnet
-
-
+ # ➤ Capture 2 – Formulaire de création du VNet MainServicesVnet
+ 
+<img width="1227" height="811" alt="2" src="https://github.com/user-attachments/assets/5417aac3-dfaa-4f85-b3e0-95b2bbef542b" />
+<img width="1230" height="820" alt="2 1" src="https://github.com/user-attachments/assets/0305794f-ed97-4d56-a9ec-3e9b92714ab2" />
 
 
 
-➤ Capture 4 – Création du sous-réseau DataSubnet
+
+
+# ➤ Capture 3 – Création du sous-réseau AppsSubnet
+<img width="1226" height="780" alt="3" src="https://github.com/user-attachments/assets/17650474-8f52-402f-a886-5c28a144e0c0" />
 
 
 
-➤ Capture 5 – Export du modèle ARM
 
 
+
+# ➤ Capture 4 – Création du sous-réseau DataSubnet
+<img width="1258" height="802" alt="4" src="https://github.com/user-attachments/assets/7953e5c1-2e07-4c3b-b65b-d4d18b81bd93" />
+
+
+
+
+# ➤ Capture 5 – Export du modèle ARM
+<img width="1197" height="927" alt="5" src="https://github.com/user-attachments/assets/f59c1d15-55be-4ba4-8d8b-51e7b4454e70" />
 
 
 # 📘 **Tâche 2 – Créer un VNet via un modèle ARM**
@@ -128,25 +136,16 @@ Comprendre comment modifier un modèle ARM existant pour automatiser la créatio
 
 6. Vérifier la création du réseau **FactoryVnet** et de ses sous-réseaux.
 
-   ➤ Capture 6 – Fichier template.json modifié
+# ➤ Capture 6 – Fichier template.json modifié
+<img width="1285" height="942" alt="6" src="https://github.com/user-attachments/assets/8c9d918f-6e31-45c1-b17c-bbdbfc563839" />
+<img width="1294" height="922" alt="6 1" src="https://github.com/user-attachments/assets/3db177c8-9579-415e-b019-40eb25f4d1af" />
 
 
-
-Modifier le template exporté
-
-
-➤ Capture 7 – Déploiement du template ARM
-
-
-
-
-
-➤ Capture 8 – Résultat : VNet FactoryVnet créé
-
-
-
-6. Vérifier la création du réseau FactoryVnet
-
+# ➤ Capture 7 – Déploiement du template ARM
+<img width="1230" height="798" alt="7" src="https://github.com/user-attachments/assets/d71c0fc3-30de-4910-ac9e-8fc90a23b40a" />
+<img width="1214" height="812" alt="7 1" src="https://github.com/user-attachments/assets/da444e5b-0c84-4f49-a7c3-71df7340576d" />
+#  ➤ Capture 8 – Résultat : VNet FactoryVnet créé
+<img width="1220" height="792" alt="8" src="https://github.com/user-attachments/assets/c5d26c50-eaa3-4c24-b340-d7c968ea4e6b" />
 
 ---
 
@@ -164,7 +163,9 @@ Mettre en place un **ASG** pour regrouper des machines par rôle applicatif et u
 * Région : East US
 
 Cet ASG servira pour les VMs front-end web.
-➤ Capture 9 – Création de l’ASG
+# ➤ Capture 9 – Création de l’ASG
+<img width="1205" height="813" alt="9 1" src="https://github.com/user-attachments/assets/069c25d2-b555-41c9-86d5-618ffe8c38ed" />
+<img width="1216" height="804" alt="9" src="https://github.com/user-attachments/assets/ef736818-21d0-4209-b48c-a0117347efcd" />
 
 
 
@@ -175,13 +176,11 @@ Cet ASG servira pour les VMs front-end web.
 * Nom : **nsg-MainServices**
 * Associer au sous-réseau **AppsSubnet** (MainServicesVnet)
 
-  ➤ Capture 10 – Création du NSG
+ # ➤ Capture 10 – Création du NSG
+ <img width="1228" height="810" alt="10" src="https://github.com/user-attachments/assets/a0b353fa-0bb2-42fd-9032-df608e593510" />
 
-
-
-➤ Capture 11 – Association du NSG au sous-réseau
-
-
+ # ➤ Capture 11 – Association du NSG au sous-réseau
+ <img width="1240" height="803" alt="11" src="https://github.com/user-attachments/assets/1c159e90-507b-407f-bd88-0ddf2123d983" />
 
 ---
 
@@ -198,7 +197,7 @@ Cet ASG servira pour les VMs front-end web.
 | Nom       | AllowWebASG                |
 
 **➤ Capture 12 – Règle AllowWebASG**
-
+<img width="1210" height="807" alt="12" src="https://github.com/user-attachments/assets/a8e70f81-a5be-46f0-8fae-41f71d056c6f" />
 
 ---
 
@@ -212,7 +211,9 @@ Cet ASG servira pour les VMs front-end web.
 | Priorité    | 4096                 |
 | Nom         | DenyInternetOutbound |
 
-➤ Capture 13 – Règle DenyInternetOutbound
+# ➤ Capture 13 – Règle DenyInternetOutbound
+<img width="1225" height="817" alt="13" src="https://github.com/user-attachments/assets/611630bf-6583-4f9c-9969-55f788626587" />
+
 ---
 
 # 📘 **Tâche 4 – Configurer Azure DNS (public & privé)**
@@ -235,15 +236,24 @@ Découvrir la gestion DNS sur Azure : zone publique, zone privée, liens réseau
    | --- | ---- | --- | -------- |
    | www | A    | 1   | 10.2.2.4 |
 
-➤ Capture 14 – Création de la zone DNS publique
-➤ Capture 15 – Liste des serveurs DNS Azure
-➤ Capture 16 – Enregistrement A : www
+# ➤ Capture 14 – Création de la zone DNS publique et liste des serveurs DNS Azure
 
-4. Tester la résolution :
+<img width="1215" height="802" alt="14 15" src="https://github.com/user-attachments/assets/5ca5f21d-de26-4db6-a7a1-0b130a374767" />
+
+
+
+# ➤ Capture 15 – Enregistrement A : www
+
+<img width="1230" height="820" alt="16" src="https://github.com/user-attachments/assets/b4a6db07-f1ca-489d-9d3e-751cc0d0b259" />
+
+
+ #  ➤Tester la résolution :
 
 ```bash
-nslookup www.demo-lab.net <Azure-DNS-Server>
+nslookup www.demo-lab.net ns-1-09.azure-dns.com.
 ```
+<img width="1120" height="787" alt="TEST" src="https://github.com/user-attachments/assets/d5e96adf-13b0-4c19-a921-38947e74aa86" />
+
 
 ---
 
@@ -261,9 +271,15 @@ nslookup www.demo-lab.net <Azure-DNS-Server>
    | Nom       | IP       |
    | --------- | -------- |
    | sensor-vm | 10.2.2.4 |
-➤ Capture 17 – Création zone DNS privée
-➤ Capture 18 – Private DNS VNet Link
-➤ Capture 19 – Ajout enregistrement A (sensor-vm)
+# ➤ Capture 17 – Création zone DNS privée
+<img width="1221" height="796" alt="17" src="https://github.com/user-attachments/assets/e8cabe11-d790-4ff8-ac35-e5f1a5f6f450" />
+
+# ➤ Capture 18 – Private DNS VNet Link
+<img width="1231" height="792" alt="18" src="https://github.com/user-attachments/assets/05b81904-f48c-4280-a578-49229ca7f5e4" />
+
+# ➤ Capture 19 – Ajout enregistrement A (sensor-vm)
+<img width="1183" height="832" alt="19" src="https://github.com/user-attachments/assets/67bc4e02-c612-4370-8f50-0ec8acddfb6e" />
+
 
 
 ---
