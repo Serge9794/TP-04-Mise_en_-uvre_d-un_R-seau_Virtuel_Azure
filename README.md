@@ -289,7 +289,7 @@ Remove-AzResourceGroup -Name network-lab-rg
 ### Via Azure CLI
 
 ```bash
-az group delete --name network-lab-rg
+az group delete --name network-lab-rg 
 ```
 
 ---
