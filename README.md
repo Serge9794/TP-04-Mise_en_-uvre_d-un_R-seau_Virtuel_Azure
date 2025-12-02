@@ -71,6 +71,28 @@ Apprendre à créer manuellement un réseau virtuel, définir son adressage, cr�
    * `template.json`
    * `parameters.json`
 
+     ➤ Capture 1 – Création du groupe de ressources
+
+
+➤ Capture 2 – Formulaire de création du VNet MainServicesVnet
+
+
+
+
+
+➤ Capture 3 – Création du sous-réseau AppsSubnet
+
+
+
+
+
+➤ Capture 4 – Création du sous-réseau DataSubnet
+
+
+
+➤ Capture 5 – Export du modèle ARM
+
+
 
 
 # 📘 **Tâche 2 – Créer un VNet via un modèle ARM**
@@ -106,6 +128,26 @@ Comprendre comment modifier un modèle ARM existant pour automatiser la créatio
 
 6. Vérifier la création du réseau **FactoryVnet** et de ses sous-réseaux.
 
+   ➤ Capture 6 – Fichier template.json modifié
+
+
+
+Modifier le template exporté
+
+
+➤ Capture 7 – Déploiement du template ARM
+
+
+
+
+
+➤ Capture 8 – Résultat : VNet FactoryVnet créé
+
+
+
+6. Vérifier la création du réseau FactoryVnet
+
+
 ---
 
 # 📘 **Tâche 3 – Configurer un ASG et un NSG**
@@ -122,6 +164,9 @@ Mettre en place un **ASG** pour regrouper des machines par rôle applicatif et u
 * Région : East US
 
 Cet ASG servira pour les VMs front-end web.
+➤ Capture 9 – Création de l’ASG
+
+
 
 ---
 
@@ -129,6 +174,14 @@ Cet ASG servira pour les VMs front-end web.
 
 * Nom : **nsg-MainServices**
 * Associer au sous-réseau **AppsSubnet** (MainServicesVnet)
+
+  ➤ Capture 10 – Création du NSG
+
+
+
+➤ Capture 11 – Association du NSG au sous-réseau
+
+
 
 ---
 
@@ -144,6 +197,9 @@ Cet ASG servira pour les VMs front-end web.
 | Priorité  | 100                        |
 | Nom       | AllowWebASG                |
 
+**➤ Capture 12 – Règle AllowWebASG**
+
+
 ---
 
 ## 🔵 **3.4 – Ajouter une règle sortante bloquant Internet**
@@ -156,6 +212,7 @@ Cet ASG servira pour les VMs front-end web.
 | Priorité    | 4096                 |
 | Nom         | DenyInternetOutbound |
 
+➤ Capture 13 – Règle DenyInternetOutbound
 ---
 
 # 📘 **Tâche 4 – Configurer Azure DNS (public & privé)**
@@ -177,6 +234,10 @@ Découvrir la gestion DNS sur Azure : zone publique, zone privée, liens réseau
    | Nom | Type | TTL | IP       |
    | --- | ---- | --- | -------- |
    | www | A    | 1   | 10.2.2.4 |
+
+➤ Capture 14 – Création de la zone DNS publique
+➤ Capture 15 – Liste des serveurs DNS Azure
+➤ Capture 16 – Enregistrement A : www
 
 4. Tester la résolution :
 
@@ -200,6 +261,10 @@ nslookup www.demo-lab.net <Azure-DNS-Server>
    | Nom       | IP       |
    | --------- | -------- |
    | sensor-vm | 10.2.2.4 |
+➤ Capture 17 – Création zone DNS privée
+➤ Capture 18 – Private DNS VNet Link
+➤ Capture 19 – Ajout enregistrement A (sensor-vm)
+
 
 ---
 
